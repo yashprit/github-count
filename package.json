@@ -1,0 +1,49 @@
+{
+  "name": "github-count",
+  "version": "0.0.0-alpha",
+  "description": "fetch github pullrequest or count",
+  
+    "bugs": {
+      "url": "yashprit/github-count/issues"
+  },
+  "author": {  "url": "yashprit.github.io"  ,  "name": "Yashprit"  ,  "email": "yashprit@gmail.com" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "yashprit/github-count"
+  },
+  "license": "MIT",
+  "files": [ 
+        "index.js"   ,
+        "cli.js" 
+  ],
+  "keywords": [
+    "github-count"  ,
+        "github"  ,
+        "github-count"  ,
+        "github-pullrequest"  ,
+        "pullrequest"  ,
+        "pr"  ,
+        "count"  ,
+        "issues"  ,
+        "contributor" 
+  ],
+  "dependencies": { 
+        "minimist": "^1.1.1" 
+  },
+  "devDependencies": { 
+        "mocha": "*" 
+       ,
+      "jshint-stylish": "^1.0.0"  ,
+        "browserify": "^7.0.0" 
+  },
+  "scripts": {  "browser": "browserify index.js > browser.js",
+      
+      
+      
+       "test": "mocha" 
+  }  ,
+      "bin": {
+        "github-count": "cli.js"
+    } 
+}
