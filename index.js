@@ -15,9 +15,9 @@ var githubApi = function(url) {
         try {
           var count = Number(parseLinkHeader(res.headers["link"]).last.page);
         } catch (er) {
-          var count = data.length;
+          var count = JSON.parse(data).length;
         }
-        callback(count);
+        callback(null, count);
       });
     },
     issues: function(callback) {
@@ -26,9 +26,9 @@ var githubApi = function(url) {
         try {
           var count = Number(parseLinkHeader(res.headers["link"]).last.page);
         } catch (er) {
-          var count = data.length;
+          var count = JSON.parse(data).length;
         }
-        callback(count);
+        callback(null, count);
       });
     },
     contributors: function(callback) {
@@ -37,9 +37,9 @@ var githubApi = function(url) {
         try {
           var count = Number(parseLinkHeader(res.headers["link"]).last.page);
         } catch (er) {
-          var count = data.length;
+          var count = JSON.parse(data).length;
         }
-        callback(count);
+        callback(null, count);
       });
     }
   }
@@ -70,7 +70,6 @@ var githubCount = function(username, reponame, cb) {
     }
     cb(null, _pool);
   });
-  githubApi(url, cb);
 }
 
 module.exports = githubCount;

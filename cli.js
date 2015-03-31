@@ -8,5 +8,7 @@ var username = argv.u;
 var reponame = argv.r;
 
 githubCount(username, reponame, function(err, data) {
-  console.log(err, data)
-})
+  if (data) {
+    console.log(data[username][reponame]);
+  }
+});
