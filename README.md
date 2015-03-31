@@ -24,7 +24,8 @@ github-count('yashprit', 'github-count', cb);
 
 ```sh
 $ npm install --global github-count
-$ github-count --help
+$ github-count --u yashprit --r github-count
+#=> { pulls: 0, issues: 0, contributors: 1 }
 ```
 
 
