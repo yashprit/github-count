@@ -1,11 +1,25 @@
 'use strict';
-exports['truth is true'] = {
-  setUp: function(done) {
+var assert = require('assert');
+var githubUsername = require('./');
+
+it('should get GitHub various count based on username and repo', function(done) {
+  this.timeout(20000);
+
+  githubUsername('yashprit', 'generator-bode', function(err, count) {
+    if (err) {
+      console.error(err);
+      assert(false);
+    }
+
+    assert.deepEqual(count, {
+      'yashprit': {
+        'generator-bode': {
+          pulls: 0,
+          issues: 10,
+          contributors: 1
+        }
+      }
+    });
     done();
-  },
-  'truth': function(test) {
-    test.expect(1);
-    test.ok(true, "Truth is true!");
-    test.done();
-  }
-};
+  });
+});
