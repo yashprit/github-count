@@ -1,6 +1,6 @@
 {
   "name": "github-count",
-  "version": "0.0.0",
+  "version": "0.0.0-beta",
   "description": "fetch github pullrequest or count for public repository",
   "bugs": {
     "url": "yashprit/github-count/issues"
