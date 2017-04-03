@@ -1,6 +1,7 @@
 'use strict';
-var assert = require('assert');
-var githubUsername = require('./');
+var 
+  assert = require('assert'),
+  githubUsername = require('./');
 
 it('should get GitHub various count based on username and repo', function(done) {
   this.timeout(20000);

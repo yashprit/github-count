@@ -16,7 +16,7 @@ $ npm install --save github-count
 ```js
 var githubCount = require('github-count');
 
-github-count('yashprit', 'github-count', cb);
+githubCount('yashprit', 'github-count', cb);
 //=> { pulls: 0, issues: 0, contributors: 1 }
 ```
 
